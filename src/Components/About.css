@@ -1,0 +1,233 @@
+.about-container {
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+}
+
+/* About Section */
+.about-section {
+  margin-bottom: 3rem;
+  background-color: #f0f9ff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.about-section:hover {
+  background-color: #d6e7ee;
+}
+
+.about-heading {
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.about-text-container {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 1rem;
+  gap: 2rem;
+}
+
+.about-text {
+  color: #777;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  max-width: 800px;
+  font-family: 'Arial', sans-serif;
+  text-align: justify;
+}
+
+/* Transactional vs Prepo Section */
+.transactional-vs-prepo {
+  margin-top: 4rem;
+}
+
+.section-heading {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.prepo-transactional-row {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.prepo, .transactional {
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+.col-8 {
+  width: 66.66%;
+}
+
+.transactional {
+  background-color: #007bff;
+  color: white;
+}
+
+.prepo {
+  background-color: #e6f7ff;
+  color: #333;
+}
+
+.prepo h3, .transactional h3 {
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.prepo p, .transactional p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* How Prepo Works Section */
+.icons-row-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 50px;
+  background-color: white;
+  padding: 20px;
+}
+
+.icon-circle {
+  text-align: center;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border: 2px solid blue;
+  border-radius: 50%;
+  color: blue;
+  font-size: 30px;
+  background-color: white;
+  margin-bottom: 10px;
+}
+
+.icon-label {
+  font-size: 14px;
+  color: #333;
+}
+
+/* Sign-up Section */
+.signup-section {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #F4F9FF;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.signup-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.signup-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #007BFF;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.signup-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.signup-heading {
+  text-align: center;
+}
+
+.signup-button {
+  background-color: #007BFF;
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 15px 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+  .about-text-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .prepo-transactional-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .col-4, .col-8 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .icons-row-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .icon-circle {
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about-heading, .section-heading {
+    font-size: 2rem;
+  }
+
+  .about-text {
+    font-size: 1rem;
+  }
+
+  .icon {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+
+  .signup-button {
+    width: 100%;
+    padding: 12px;
+  }
+}

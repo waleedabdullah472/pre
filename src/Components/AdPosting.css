@@ -1,0 +1,317 @@
+/* General Styling */
+.ad-posting-container {
+  padding: 30px;
+  font-family: Arial, sans-serif;
+  background-color: white;
+}
+
+/* Header Section */
+.adPosting-section {
+  margin-bottom: 3rem;
+  background-color: #F4F9FF; /* Lighter background for a more active feel */
+  padding: 2rem; /* Added padding to give some spacing inside */
+  border-radius: 10px; /* Optional: rounded corners for a softer look */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  transition: background-color 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.adPosting-section:hover {
+  background-color: #d6e7ee; /* Background change on hover */
+}
+
+.adPosting-heading {
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: bold; /* Added boldness for emphasis */
+  margin-bottom: 1rem; /* Added space below heading */
+}
+
+.adPosting-text-container {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 1rem;
+  gap: 2rem; /* Added space between text and any other content in the container */
+}
+
+.adPosting-text {
+  color: #777;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  max-width: 800px;
+  font-family: 'Arial', sans-serif; /* Specified font family for consistency */
+  text-align: justify; /* Justified text for a cleaner look */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Upload Ads Section */
+/* App.css */
+
+
+/* Base Card Styles */
+.card {
+  width: 700px;
+  background: #CCDFF9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 16px;
+  margin: 0 auto; /* Centers the card */
+}
+
+/* Logo Styling */
+.logo {
+  display: block;
+  margin: 0 auto;
+  width: 150px; /* Adjust as needed */
+  border-radius: 4px;
+}
+
+/* Heading Styling */
+.card h2 {
+  margin: 16px 0 8px;
+  font-size: 24px;
+  text-align: center;
+}
+
+/* Paragraph Styling */
+.card p {
+  margin: 8px 0;
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+}
+
+/* Textarea Styling */
+.card textarea {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  resize: vertical;
+}
+
+/* Button Styling */
+.btn {
+  display: inline-block;
+  padding: 15px 40px;
+  margin-top: 10px;
+  font-size: 16px;
+  color: #fff;
+  background-color: blue;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Specific Styling for the Upload Button */
+.btn.upload {
+  background-color: blue;
+}
+
+/* Row Container for Aligning Elements (Upload button on right) */
+.row {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* Centered Container Class for the Select File Button */
+.center {
+  text-align: center;
+}
+
+/* Responsive Styles */
+
+/* Small Screens (up to 600px wide) */
+@media (max-width: 600px) {
+  .card {
+    width: 100%;
+    padding: 12px;
+  }
+  
+  .card h2 {
+    font-size: 20px;
+  }
+  
+  .card p {
+    font-size: 14px;
+  }
+  
+  .btn {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+  
+  .logo {
+    width: 120px;
+  }
+}
+
+/* Extra Small Screens (up to 400px wide) */
+@media (max-width: 400px) {
+  .card {
+    padding: 8px;
+  }
+  
+  .card h2 {
+    font-size: 18px;
+  }
+  
+  .card p {
+    font-size: 12px;
+  }
+  
+  .btn {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+  
+  .logo {
+    width: 100px;
+  }
+}
+
+/* Medium Screens (typically tablets, 601px to 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .card {
+    max-width: 700px; /* Retain the max width */
+    width: 90%;       /* Use 90% of the viewport width for a flexible layout */
+    padding: 14px;    /* Slightly reduced padding */
+  }
+  
+  .card h2 {
+    font-size: 22px;  /* Slightly smaller heading */
+  }
+  
+  .card p {
+    font-size: 15px;  /* Adjust paragraph text size */
+  }
+  
+  .btn {
+    padding: 9px 14px; /* Adjust button padding */
+    font-size: 15px;   /* Adjust button font size */
+  }
+  
+  .logo {
+    width: 130px;      /* Adjust logo size */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Sign-up Section */.signup-section {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #F4F9FF;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* Left-side content (icon + text) */
+.signup-info {
+  display: flex;
+  align-items: center; /* Center icon and text vertically */
+  gap: 15px; /* Space between icon and text */
+}
+
+/* Icon Styling - Left Aligned */
+.signup-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #007BFF;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Centering the heading and paragraph */
+.signup-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the text */
+  text-align: center;
+}
+
+.signup-heading {
+  text-align: center;
+}
+
+/* Button centered on the right */
+.signup-button {
+  background-color: #007BFF;
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 15px 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive styling for smaller screens */
+@media screen and (max-width: 600px) {
+  .signup-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .signup-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .signup-heading {
+    text-align: center;
+  }
+
+  .signup-button {
+    margin-top: 15px;
+  }
+}

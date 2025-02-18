@@ -1,0 +1,188 @@
+/* Footer container with gradient and shadow */
+.footer-container {
+  background: linear-gradient(135deg, #0d263b, #1f3b4d);
+  color: #fff;
+  padding: 50px 60px; 
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  margin: 0 auto;
+  z-index: 10;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds subtle shadow */
+  border-radius: 15px; /* Rounded corners for the footer */
+  transition: all 0.3s ease-in-out;
+}
+
+/* Footer container hover effect */
+.footer-container:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+/* Footer content layout */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  transition: all 0.3s ease-in-out;
+}
+
+/* General section styles */
+.footer-section {
+  flex: 1;
+  margin: 0 20px;
+  min-width: 250px;
+  background-color: #333;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Section hover effect */
+.footer-section:hover {
+  background-color: #444;
+  transform: scale(1.05); /* Zoom-in effect on hover */
+}
+
+/* Section Title Style */
+.footer-section h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #f0a500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+/* Section Title hover effect */
+.footer-section h3:hover {
+  color: #ff6347; /* Hover color for section titles */
+}
+
+/* Text within sections */
+.footer-section p, .footer-section ul {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #ccc;
+}
+
+/* Links inside sections */
+.footer-section a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Links hover effect */
+.footer-section a:hover {
+  color: #3498db; /* Hover color for general links (blue) */
+  text-decoration: underline; /* Adds underline on hover */
+}
+
+/* Quick Links list with gap */
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.footer-section ul li {
+  margin-bottom: 20px; /* Increased gap */
+}
+
+/* Quick Links hover effect */
+.footer-section ul li a:hover {
+  color: #3498db; /* Hover color for quick links (blue) */
+  transform: translateX(5px); /* Subtle horizontal movement on hover */
+}
+
+/* Social icons section */
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 24px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Social icons hover effect */
+.social-icons a:hover {
+  color: #3498db; /* Hover color for social icons (blue) */
+  transform: scale(1.2); /* Slight zoom effect on hover */
+}
+
+/* Footer bottom section */
+.footer-bottom {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  color: #bbb;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+/* Footer bottom hover effect */
+.footer-bottom p:hover {
+  color: #3498db; /* Hover color for footer bottom text (blue) */
+  cursor: pointer; /* Changes to a pointer when hovered */
+}
+
+/* Responsive Styles for Medium Screens */
+@media (max-width: 1024px) {
+  .footer-container {
+    padding: 40px 30px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    margin: 15px 0;
+  }
+}
+
+/* Responsive Styles for Small Screens */
+@media (max-width: 768px) {
+  .footer-section h3 {
+    font-size: 20px;
+  }
+
+  .footer-section p, .footer-section ul {
+    font-size: 14px;
+  }
+
+  .footer-bottom p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    padding: 30px 20px;
+    width: 100%;
+  }
+
+  .footer-section h3 {
+    font-size: 18px;
+  }
+
+  .footer-section p, .footer-section ul {
+    font-size: 13px;
+  }
+}

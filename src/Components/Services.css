@@ -1,0 +1,390 @@
+/* Services.css */
+
+/* New container for Services */
+.services-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+.service-section {
+  margin-bottom: 3rem;
+  background-color: #f0f9ff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease-in-out;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.service-section:hover {
+  background-color: #d6e7ee;
+}
+
+.service-heading {
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.service-title {
+  font-size: 2rem;
+  color: #333;
+  font-weight: normal;
+  margin-top: 0.5rem;
+}
+
+.service-text-container {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 1rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.service-text {
+  color: #777;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  max-width: 800px;
+  font-family: 'Arial', sans-serif;
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .service-heading {
+    font-size: 2rem;
+  }
+  .service-title {
+    font-size: 1.5rem;
+  }
+  .service-text {
+    font-size: 1.1rem;
+    max-width: 90%;
+  }
+  .service-text-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .service-section {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-heading {
+    font-size: 1.5rem;
+  }
+  .service-title {
+    font-size: 1.2rem;
+  }
+  .service-text {
+    font-size: 1rem;
+  }
+}
+
+/* General Styles */
+.single-card {
+  max-width: 400px;
+  margin-bottom: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.single-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.service-card {
+  flex: 1;
+  max-width: 380px;
+  background: #f0f9ff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  height: 30vh;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-icon {
+  font-size: 3rem;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.service-card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.service-card-text {
+  font-size: 1rem;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .service-card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .service-card {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .single-card {
+    max-width: 90%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive Table */
+/* Table Container */
+
+/* H1 Styling */
+h1 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Table Container */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8%;
+}
+
+/* Table Styling */
+table {
+  width: 90%;
+  max-width: 1200px;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 16px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th {
+  background-color: #e6f7ff;
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+  border-bottom: 3px solid #ddd;
+}
+
+td {
+  padding: 10px;
+  border-bottom: 2px solid #ddd;
+}
+
+td:first-child {
+  color: black;
+  font-weight: bold;
+}
+
+.blue-text {
+  color: blue;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #e6f7ff;
+}
+
+tbody tr:nth-child(even) {
+  background-color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  table {
+    width: 100%;
+    font-size: 14px;
+  }
+  th, td {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  table {
+    font-size: 12px;
+  }
+  th, td {
+    padding: 12px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FAQ Section */
+/* FAQ Section - Fully Responsive */
+
+
+/* FAQ Container */
+.faq-container {
+  width: 90%;
+  max-width: 1100px;
+  
+  padding: 20px;
+  border-radius: 12px;
+  
+  text-align: center;
+}
+
+/* FAQ Title */
+.faq-title {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* FAQ Items */
+.faq-item {
+  background-color: #f0f9ff;
+  
+  padding: 30px;
+  margin-bottom: 40px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.faq-item:hover {
+  transform: scale(1.02);
+}
+
+/* FAQ Question */
+.faq-question {
+  font-size: 18px;
+  font-weight: bold;
+  color: #222;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* FAQ Answer */
+.faq-answer {
+  font-size: 16px;
+  color: #555;
+  margin-top: 50px;
+  display: none;
+}
+
+/* Active Answer */
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+/* Arrow Animation */
+.faq-icon {
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .faq-container {
+      width: 95%;
+      padding: 15px;
+  }
+  .faq-title {
+      font-size: 26px;
+  }
+  .faq-question {
+      font-size: 17px;
+  }
+  .faq-answer {
+      font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .faq-title {
+      font-size: 24px;
+  }
+  .faq-question {
+      font-size: 16px;
+  }
+  .faq-answer {
+      font-size: 14px;
+  }
+}

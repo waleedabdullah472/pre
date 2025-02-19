@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { FaBars, FaHome, FaInfoCircle, FaPhoneAlt, FaShieldAlt, FaUserAlt, FaSignInAlt } from "react-icons/fa";
 import "./Header.css"; // For CSS styles
 
 const Header = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const sidebarRef = useRef(null);
 
   useEffect(() => {
     const handleResize = () => {
@@ -13,13 +14,25 @@ const Header = () => {
         setIsSidebarOpen(false); // Close sidebar if screen is resized to large
       }
     };
-    
 
     window.addEventListener("resize", handleResize);
     handleResize();
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (isSidebarOpen && sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+        setIsSidebarOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [isSidebarOpen]);
+
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -29,10 +42,7 @@ const Header = () => {
     <header className="header">
       {/* Left side with logo */}
       <div className="header-left">
-        
-          <img src=" vend 1.png" alt="Logo" className="logo" />
-     
-    
+        <img src="vend 1.png" alt="Logo" className="logo" />
       </div>
 
       {/* Center Links */}
@@ -59,15 +69,14 @@ const Header = () => {
       </div>
 
       {/* Sidebar */}
-      <div className={`sidebar ${isSidebarOpen ? "open" : ""}`}>
+      <div className={`sidebar ${isSidebarOpen ? "open" : ""}`} ref={sidebarRef}>
         <div className="sidebar-content">
-        <a href="/signup" className="link" onClick={() => setIsSidebarOpen(false)}>Sign Up</a>
-        <a href="/signin" className="link" onClick={() => setIsSidebarOpen(false)}>Sign In</a>
+          <a href="/signup" className="link" onClick={() => setIsSidebarOpen(false)}>Sign Up</a>
+          <a href="/signin" className="link" onClick={() => setIsSidebarOpen(false)}>Sign In</a>
           <a href="/" className="link" onClick={() => setIsSidebarOpen(false)}>Home</a>
           <a href="/About" className="link" onClick={() => setIsSidebarOpen(false)}>About</a>
           <a href="/Services" className="link" onClick={() => setIsSidebarOpen(false)}>Services</a>
           <a href="/AdPosting" className="link" onClick={() => setIsSidebarOpen(false)}>AdPosting</a>
-         
         </div>
       </div>
     </header>

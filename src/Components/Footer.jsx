@@ -1,71 +1,79 @@
+// src/components/Footer.js
 import React from 'react';
-import './Footer.css';
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
-
-// Utility function to generate unique class names
-const generateUniqueClassName = (baseName) => {
-  return `${baseName}-${Date.now()}-${Math.floor(Math.random() * 1000)}`;
-};
+import './Footer.css'; // Import your CSS file
 
 const Footer = () => {
-  // Generate unique class names for each section
-  const aboutClass = generateUniqueClassName("about-section");
-  const quickLinksClass = generateUniqueClassName("quick-links-section");
-  const servicesClass = generateUniqueClassName("services-section");
-  const contactClass = generateUniqueClassName("contact-section");
+  const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="footer-container">
-      <div className="footer-content">
-        
-        {/* About Section with Image */}
-        <div className={aboutClass}>
-          <img src="vend 1.png" alt="About Us" className="about-image" />
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  <br></br> Nulla posuere felis at urna tincidunt, sed sodales mi cursus.</p>
-          <div className="social-icons">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
-          </div>
-        </div>
+    <footer className="footer">
+      <div className="footer-container">
+        <div className="footer-section about-us">
+          <h3>About Us</h3>
+          <div className="about-us-image-placeholder">
+    <img src="vend 1.png" alt="About Us" className="your-custom-class" />
+</div>
+          <div className="about-us-content">
+   
 
-        {/* Quick Links Section */}
-        <div className={quickLinksClass}>
+            <p>
+              Lorem Ipsum is simply dummy text <br></br> of the and typesetting
+              industry. <br></br>Lorem Ipsum is dummy text of the printing.
+            </p>
+          </div>
+          <ul className="social-icons">
+            <li>
+              <a href="#">
+                <i className="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i className="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i className="fab fa-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i className="fab fa-linkedin-in"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div className="footer-section">
           <h3>Quick Links</h3>
           <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/adposting">Post Ad</a></li>
           </ul>
         </div>
-
-        {/* Services Section */}
-        <div className={servicesClass}>
+        <div className="footer-section">
           <h3>Services</h3>
-          <ul>
-            <li>Web Development</li>
-            <li>Graphic Design</li>
-            <li>SEO Optimization</li>
-            <li>Marketing</li>
-          </ul>
+          <p>Wish List</p>
+          <p>Login</p>
+          <p>Submit a request</p>
+          <p>Appointment</p>
+          <p>Promotional Offers</p>
         </div>
-
-        {/* Contact Section */}
-        <div className={contactClass}>
-          <h3>Contact</h3>
-          <ul>
-            <li>Email: contact@example.com</li>
-            <li>Phone: +1 234 567 890</li>
-            <li>Address: 1234 Example St, City, Country</li>
-          </ul>
+        <div className="footer-section">
+          <h3>Contact</h3> {/* Corrected heading */}
+          <p>Pakistan</p>
+          <p>0300000000000</p>
+          <p>waleed@gmail.com</p> {/* Removed extra <> </> */}
         </div>
-
       </div>
-
       <div className="footer-bottom">
-        <p>&copy; 2025 My Website. All rights reserved.</p>
+        <p>&copy; {currentYear} Your Company Name. All rights reserved.</p>
+        <ul className="footer-bottom-links">
+          <li><a href="/terms">Terms of Service</a></li>
+          <li><a href="/privacy">Privacy Policy</a></li>
+        </ul>
       </div>
     </footer>
   );
